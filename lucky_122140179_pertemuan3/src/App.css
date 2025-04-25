@@ -1,0 +1,139 @@
+/* App.css - Styling utama aplikasi */
+
+:root {
+  --primary-color: #3498db;
+  --primary-dark: #2980b9;
+  --secondary-color: #2ecc71;
+  --secondary-dark: #27ae60;
+  --danger-color: #e74c3c;
+  --danger-dark: #c0392b;
+  --text-color: #333;
+  --light-text: #666;
+  --lightest-text: #999;
+  --bg-color: #f8f9fa;
+  --card-bg: #ffffff;
+  --border-color: #dee2e6;
+  --shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --radius: 8px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  padding: var(--spacing-sm);
+  border-radius: var(--radius);
+  transition: background-color 0.2s ease;
+}
+
+.main-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.app-content {
+  flex: 1;
+  padding: var(--spacing-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.app-footer {
+  background-color: var(--light-text);
+  color: white;
+  text-align: center;
+  padding: var(--spacing-md);
+  margin-top: auto;
+}
+
+/* Tombol Umum */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius);
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.1s;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Overlay Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .app-content {
+    padding: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header {
+    padding: var(--spacing-sm);
+  }
+  
+  .main-nav ul {
+    gap: var(--spacing-md);
+  }
+}
