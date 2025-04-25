@@ -1,0 +1,112 @@
+/* BookFilter.css - Styling untuk komponen filter buku */
+
+.book-filter {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    align-items: flex-end;
+  }
+  
+  .filter-section,
+  .search-section {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .filter-section label,
+  .search-section label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: var(--text-color);
+  }
+  
+  .filter-select {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .filter-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+  
+  .search-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 8px 32px 8px 12px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+  }
+  
+  .search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+  
+  .clear-search {
+    position: absolute;
+    right: 8px;
+    background: none;
+    border: none;
+    color: var(--light-text);
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .clear-search:hover {
+    color: var(--text-color);
+  }
+  
+  .reset-filter-button {
+    background-color: var(--light-text);
+    color: white;
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+  
+  .reset-filter-button:hover:not(:disabled) {
+    background-color: var(--text-color);
+  }
+  
+  .reset-filter-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+  
+  /* Responsif */
+  @media (max-width: 768px) {
+    .book-filter {
+      flex-direction: column;
+      gap: var(--spacing-sm);
+    }
+    
+    .filter-section,
+    .search-section {
+      width: 100%;
+    }
+    
+    .reset-filter-button {
+      margin-top: var(--spacing-sm);
+      width: 100%;
+    }
+  }
