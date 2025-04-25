@@ -1,0 +1,157 @@
+/* BookList.css - Styling untuk daftar buku */
+
+.book-list-container {
+    margin-top: var(--spacing-md);
+  }
+  
+  .book-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .book-list-header h2 {
+    margin: 0;
+    color: var(--text-color);
+  }
+  
+  .add-button {
+    background-color: var(--secondary-color);
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+  }
+  
+  .add-button:hover {
+    background-color: var(--secondary-dark);
+  }
+  
+  .book-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+  }
+  
+  .book-card {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: var(--spacing-md);
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .book-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .book-title {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    flex: 1;
+  }
+  
+  .book-author {
+    color: var(--light-text);
+    margin-bottom: var(--spacing-md);
+    font-style: italic;
+  }
+  
+  .status-badge {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  
+  .badge-owned {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .badge-reading {
+    background-color: #f39c12;
+    color: white;
+  }
+  
+  .badge-wishlist {
+    background-color: #9b59b6;
+    color: white;
+  }
+  
+  .book-notes {
+    background-color: #f8f9fa;
+    border-radius: var(--radius);
+    padding: var(--spacing-sm);
+    margin: var(--spacing-sm) 0;
+    font-size: 0.9rem;
+    color: var(--light-text);
+  }
+  
+  .book-card-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+  }
+  
+  .edit-button {
+    background-color: #f39c12;
+    color: white;
+  }
+  
+  .edit-button:hover {
+    background-color: #e67e22;
+  }
+  
+  .delete-button {
+    background-color: var(--danger-color);
+    color: white;
+  }
+  
+  .delete-button:hover {
+    background-color: var(--danger-dark);
+  }
+  
+  .empty-list {
+    text-align: center;
+    padding: var(--spacing-lg);
+    color: var(--light-text);
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    border: 1px dashed var(--border-color);
+  }
+  
+  /* Responsif */
+  @media (max-width: 768px) {
+    .book-cards {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .book-cards {
+      grid-template-columns: 1fr;
+    }
+    
+    .book-list-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--spacing-sm);
+    }
+    
+    .add-button {
+      width: 100%;
+    }
+  }
