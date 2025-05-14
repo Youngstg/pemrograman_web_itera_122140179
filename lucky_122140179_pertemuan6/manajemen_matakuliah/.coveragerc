@@ -1,0 +1,3 @@
+[run]
+source = manajemen_matakuliah
+omit = manajemen_matakuliah/test*
